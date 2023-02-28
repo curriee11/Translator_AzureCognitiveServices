@@ -2,17 +2,16 @@
     "routes": [
       {
         "route": "/api/*",
-        "serve": "/api/app.py",
-        "force404": false
+        "rewrite": "/api/app.py"
       },
       {
-        "route": "/*",
-        "serve": "/index.html",
-        "statusCode": 200
+        "route": "/",
+        "rewrite": "/templates/index.html"
+      },
+      {
+        "route": "/result",
+        "rewrite": "/templates/result.html"
       }
-    ],
-    "configuration": {
-      "pythonVersion": "3.9"
-    }
+    ]
   }
   
