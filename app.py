@@ -56,3 +56,9 @@ def index_post():
         original_text=original_text,
         target_language=target_language
     )
+    
+app.config["TEMPLATES_AUTO_RELOAD"] = True
+app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
+app.config["STATIC_FOLDER"] = "static"
+app.config["TEMPLATES_FOLDER"] = "templates"
+app.config["ARTIFACTS_FOLDER"] = "build"  # add this line to set the artifacts folder to 'build'
