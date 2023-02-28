@@ -1,0 +1,18 @@
+{
+    "routes": [
+      {
+        "route": "/api/*",
+        "serve": "/api/app.py",
+        "force404": false
+      },
+      {
+        "route": "/*",
+        "serve": "/index.html",
+        "statusCode": 200
+      }
+    ],
+    "configuration": {
+      "pythonVersion": "3.9"
+    }
+  }
+  
