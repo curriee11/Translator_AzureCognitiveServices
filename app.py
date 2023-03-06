@@ -64,4 +64,4 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
 app.config["STATIC_FOLDER"] = "static"
 app.config["TEMPLATES_FOLDER"] = "templates"
-app.config["ARTIFACTS_FOLDER"] = "build"  # add this line to set the artifacts folder to 'build'
+# app.config["ARTIFACTS_FOLDER"] = "build"  # add this line to set the artifacts folder to 'build'
