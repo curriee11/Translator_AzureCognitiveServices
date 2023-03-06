@@ -18,6 +18,16 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
+      - name: Build app
+      run: |
+        mkdir build
+        python app.py
+
+      - name: Archive artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: build
+        path: build
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
