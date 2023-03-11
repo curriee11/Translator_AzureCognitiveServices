@@ -19,9 +19,12 @@ def index_post():
     target_language = request.form['language']
 
     # Load the values from .env
-    key = os.environ['KEY']
-    endpoint = os.environ['ENDPOINT']
-    location = os.environ['LOCATION']
+#     key = os.environ['KEY']
+#     endpoint = os.environ['ENDPOINT']
+#     location = os.environ['LOCATION']
+    key = '3e1918486bdc4262a68971a2e081a7cf'
+    endpoint = 'https://api.cognitive.microsofttranslator.com/'
+    location = 'centralindia'
 
     # Indicate that we want to translate and the API version (3.0) and the target language
     path = '/translate?api-version=3.0'
@@ -61,4 +64,4 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
 app.config["STATIC_FOLDER"] = "static"
 app.config["TEMPLATES_FOLDER"] = "templates"
-app.config["ARTIFACTS_FOLDER"] = "build"  # add this line to set the artifacts folder to 'build'
+# app.config["ARTIFACTS_FOLDER"] = "build"  # add this line to set the artifacts folder to 'build'
